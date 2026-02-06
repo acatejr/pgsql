@@ -1,0 +1,8 @@
+*scratch*
+.env
+*.log
+tmp/
+.DS_Store/
+.venv/
+*.pyc
+*.bak
