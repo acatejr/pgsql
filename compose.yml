@@ -8,11 +8,11 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - pgsql-data
+        - pgsql-data:/var/lib/postgresql/data
     restart: unless-stopped
     tty: true
     stdin_open: true
 
 volumes:
   - pgsql-data:
-  - pgsql-data:/var/lib/postgresql/data
+
