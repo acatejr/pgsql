@@ -18,6 +18,8 @@ services:
       timeout: 5s
       retries: 5
     restart: unless-stopped
+    tty: true
+    stdin_open: true
 
 volumes:
   pgsql-data:
