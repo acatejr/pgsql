@@ -1,7 +1,10 @@
 services:
   postgres:
-    image: ghcr.io/acatejr/pgsql:17
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: postgres_db
+    env_file: .env
     ports:
       - 5432:5432
     volumes:
@@ -11,4 +14,5 @@ services:
     stdin_open: true
 
 volumes:
-  pgsql-data:
+  - pgsql-data:
+  - pgsql-data:/var/lib/postgresql/data
