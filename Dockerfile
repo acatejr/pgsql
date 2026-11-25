@@ -1,5 +1,7 @@
 FROM postgres:17-bookworm
 
+EXPOSE 5432
+
 # Install build dependencies, build pgvector, then clean up
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
